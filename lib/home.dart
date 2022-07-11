@@ -12,8 +12,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SiteConfig.screenHeight = MediaQuery.of(context).size.height;
-    SiteConfig.screenWidth = MediaQuery.of(context).size.width;
+    SiteConfig.screenSizeStreamController.add(
+      [MediaQuery.of(context).size.height, MediaQuery.of(context).size.width],
+    );
     List<Course> courses = Course.courses;
     return Scaffold(
       appBar: SiteConfig.getAppBar(context, title),

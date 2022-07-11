@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pity_site/blog.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import 'dart:async';
@@ -14,8 +15,8 @@ class SiteConfig {
       StreamController<List<double>>.broadcast();
   static double screenWidth = 0;
   static double screenHeight = 0;
-  // theme colors
 
+  // theme colors
   static ColorScheme lightColors = const ColorScheme(
     brightness: Brightness.light,
     primary: Color(0xff6200ee),
@@ -78,12 +79,29 @@ class SiteConfig {
           visible: false,
           visibleWhen: const [Condition.largerThan(name: TABLET)],
           child: TextButton(
+              autofocus: title == "Blog",
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => const BlogPage(),
+                    settings: const RouteSettings(name: "/Blog"),
+                    reverseTransitionDuration: Duration.zero,
+                    transitionDuration: Duration.zero,
+                  ),
+                );
+              },
+              child: const Text("Blog")),
+        ),
+        ResponsiveVisibility(
+          visible: false,
+          visibleWhen: const [Condition.largerThan(name: TABLET)],
+          child: TextButton(
               autofocus: title == "Contato",
               onPressed: () {
                 Navigator.of(context).pushReplacement(
                   PageRouteBuilder(
                     pageBuilder: (_, __, ___) => const ContactPage(),
-                    settings: const RouteSettings(name: "/contato"),
+                    settings: const RouteSettings(name: "/Contato"),
                     reverseTransitionDuration: Duration.zero,
                     transitionDuration: Duration.zero,
                   ),

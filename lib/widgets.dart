@@ -247,9 +247,12 @@ class MyContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Colors.amber.withAlpha(100),
+        ),
         height: 250,
         width: 250,
-        color: Colors.amber.withAlpha(100),
       ),
     );
   }

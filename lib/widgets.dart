@@ -3,6 +3,8 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 import 'courser_data.dart';
 
+import 'config.dart';
+
 class AppBarTitle extends StatelessWidget {
   const AppBarTitle({Key? key}) : super(key: key);
 
@@ -163,6 +165,57 @@ class SubscribeBlock extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+}
+
+class AboutBlock extends StatelessWidget {
+  final Image? image;
+  final String text;
+
+  final Color color;
+  const AboutBlock(
+      {Key? key, this.image, required this.text, required this.color})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    List<Widget> rowColChildren = [
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ),
+    ];
+    return SizedBox(
+      height: 400,
+      width: SiteConfig.screenWidth,
+      child: Container(
+        color: color,
+        padding: const EdgeInsets.all(8.0),
+        child: SiteConfig.screenWidth > SiteConfig.screenHeight
+            ? Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: rowColChildren,
+              )
+            : Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: rowColChildren,
+              ),
+      ),
     );
   }
 }

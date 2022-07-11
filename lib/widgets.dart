@@ -178,7 +178,6 @@ class MyTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextField(
-        obscureText: true,
         decoration: InputDecoration(
             border: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.black),
@@ -235,6 +234,22 @@ class AboutBlock extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: rowColChildren,
               ),
+      ),
+    );
+  }
+}
+
+class MyContainer extends StatelessWidget {
+  const MyContainer({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Container(
+        height: 250,
+        width: 250,
+        color: Colors.amber.withAlpha(100),
       ),
     );
   }

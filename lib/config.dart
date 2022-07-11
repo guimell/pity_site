@@ -1,10 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:responsive_framework/responsive_framework.dart';
+
 import 'dart:async';
 
-import 'package:flutter/material.dart';
-import 'package:pity_site/contact.dart';
-import 'package:pity_site/home.dart';
-import 'package:pity_site/widgets.dart';
-import 'package:responsive_framework/responsive_framework.dart';
+import 'about.dart';
+import 'home.dart';
+import 'contact.dart';
+import 'widgets.dart';
 
 class SiteConfig {
   //Screen size
@@ -88,6 +90,23 @@ class SiteConfig {
                 );
               },
               child: const Text("Contato")),
+        ),
+        ResponsiveVisibility(
+          visible: false,
+          visibleWhen: const [Condition.largerThan(name: TABLET)],
+          child: TextButton(
+              autofocus: title == "About",
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => const AboutPage(),
+                    settings: const RouteSettings(name: "/About"),
+                    reverseTransitionDuration: Duration.zero,
+                    transitionDuration: Duration.zero,
+                  ),
+                );
+              },
+              child: const Text("About")),
         ),
         IconButton(
           icon: const Icon(Icons.mark_email_unread_rounded),

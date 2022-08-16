@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:pity_site/config.dart';
-import 'package:responsive_framework/responsive_framework.dart';
+import 'package:flutter/services.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
-import 'home.dart';
+import 'config.dart';
+import 'screens/home.dart';
 
-void main() => runApp(const AppWidget());
+// https://docs.flutter.dev/perf/rendering-performance
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  await initializeDateFormatting("pt_Br");
+  Blog.getBlog();
+  runApp(const AppWidget());
+}
 
 class AppWidget extends StatelessWidget {
   const AppWidget({Key? key}) : super(key: key);
@@ -12,18 +21,9 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      builder: (context, widget) => ResponsiveWrapper.builder(
-        ClampingScrollWrapper.builder(context, widget!),
-        breakpoints: const [
-          ResponsiveBreakpoint.resize(350, name: MOBILE),
-          ResponsiveBreakpoint.autoScale(600, name: TABLET),
-          ResponsiveBreakpoint.resize(800, name: DESKTOP),
-          ResponsiveBreakpoint.autoScale(1700, name: 'XL'),
-        ],
-      ),
-      title: 'Flutter Responsive Framework',
+      title: 'P2P Saúde e segurança',
       theme: ThemeData.from(colorScheme: SiteConfig.lightColors),
-      darkTheme: ThemeData.from(colorScheme: SiteConfig.darkColors),
+      // darkTheme: ThemeData.from(colorScheme: SiteConfig.darkColors),
       home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );

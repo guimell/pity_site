@@ -324,18 +324,21 @@ class ContactPageState extends State<ContactPage> {
               children: [
                 Flexible(
                   flex: 1,
-                  child: IconButton(
-                    color: SiteConfig.lightColors.background,
-                    padding: EdgeInsets.zero,
-                    onPressed: () {
-                      Uri uri = Uri.parse(
-                        "https://www.instagram.com/p2psaudeeseg/",
-                      );
-                      tryLaunchUri(uri);
-                    },
-                    icon: const FaIcon(
-                      FontAwesomeIcons.instagram,
-                      size: 40,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: IconButton(
+                      color: SiteConfig.lightColors.background,
+                      padding: EdgeInsets.zero,
+                      onPressed: () {
+                        Uri uri = Uri.parse(
+                          "https://www.instagram.com/p2psaudeeseg/",
+                        );
+                        tryLaunchUri(uri);
+                      },
+                      icon: const FaIcon(
+                        FontAwesomeIcons.instagram,
+                        size: 40,
+                      ),
                     ),
                   ),
                 ),

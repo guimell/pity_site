@@ -185,7 +185,7 @@ class ContactPageState extends State<ContactPage> {
             Flexible(
               flex: 1,
               child: MyTextField(
-                labelText: 'Quantida de funcionarios: ',
+                labelText: 'Quantidade de funcionarios: ',
                 myController: myControllerName,
               ),
             ),
@@ -244,6 +244,7 @@ class ContactPageState extends State<ContactPage> {
               ),
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -274,6 +275,7 @@ class ContactPageState extends State<ContactPage> {
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -327,12 +329,29 @@ class ContactPageState extends State<ContactPage> {
                     padding: EdgeInsets.zero,
                     onPressed: () {
                       Uri uri = Uri.parse(
-                        "https://www.instagram.com/drapaulabrasil/",
+                        "https://www.instagram.com/p2psaudeeseg/",
                       );
                       tryLaunchUri(uri);
                     },
                     icon: const FaIcon(
                       FontAwesomeIcons.instagram,
+                      size: 40,
+                    ),
+                  ),
+                ),
+                Flexible(
+                  flex: 1,
+                  child: IconButton(
+                    color: SiteConfig.lightColors.background,
+                    padding: EdgeInsets.zero,
+                    onPressed: () {
+                      Uri uri = Uri.parse(
+                        "https://web.facebook.com/p2psaudeeseg",
+                      );
+                      tryLaunchUri(uri);
+                    },
+                    icon: const FaIcon(
+                      FontAwesomeIcons.facebook,
                       size: 40,
                     ),
                   ),

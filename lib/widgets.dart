@@ -109,7 +109,7 @@ class InteractiveContent extends StatefulWidget {
   final String text;
   final IconData icon;
 
-  const InteractiveContent({
+  InteractiveContent({
     Key? key,
     this.rowCol = true,
     this.image,

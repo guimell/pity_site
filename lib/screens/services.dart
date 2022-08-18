@@ -7,7 +7,7 @@ import '../widgets.dart';
 class ServicesPage extends StatefulWidget {
   final String textService1 =
       "PCMSO - Programa de Controle Médico de Saúde Ocupacional O PCMSO é um documento elaborador por médico do trabalho,"
-      " obrigatório para empresas com 1 ou mais funcionários, com o objetivo de proteger e preservar a saúde de seus empregados."
+      " obrigatório para empresas com 1 ou mais funcionários, com o objetivo de proteger e preservar a saúde de seus empregados.\n "
       " Conforme NR 7, são diretrizes do PCMSO:\n\n"
       "a) rastrear e detectar precocemente os agravos à saúde relacionados ao trabalho;\n"
       "b) detectar possíveis exposições excessivas a agentes nocivos ocupacionais;\n"
@@ -23,7 +23,7 @@ class ServicesPage extends StatefulWidget {
       "l) controlar da imunização ativa dos empregados, relacionada a riscos ocupacionais, sempre que houver recomendação do Ministério da Saúde.\n\n"
       "A P2P elabora seu PCMSO contemplando todos os itens acima e te orienta em como executá-lo.\n";
   final String textService2 =
-      "O PGR  é um documento obrigatório para toda empresa com 1 ou mais funcionários, devendo ser revisado bianualmente, e mantido arquivado por no mínimo 20 anos."
+      "O PGR  é um documento obrigatório para toda empresa com 1 ou mais funcionários, devendo ser revisado bianualmente, e mantido arquivado por no mínimo 20 anos.\n"
       "Conforme NR 1,  a organização deve:\n\n"
       "a) evitar os riscos ocupacionais que possam ser originados no trabalho;\n"
       "b) identificar os perigos e possíveis lesões ou agravos à saúde;\n"
@@ -31,17 +31,17 @@ class ServicesPage extends StatefulWidget {
       "d) classificar os riscos ocupacionais para determinar a necessidade de adoção de medidas de prevenção;\n"
       "e) implementar medidas de prevenção;\n"
       "f) acompanhar o controle dos riscos ocupacionais.\n\n  "
-      "A P2P elabora seu PGR contemplando todos os itens acima e te orienta em como executá-lo.";
+      "A P2P elabora seu PGR contemplando todos os itens acima e te orienta em como executá-lo.\n";
   final String textService3 =
       "Indicado para as microempresas e empresas de pequeno porte, graus de risco 1 e 2, trata-se de uma versão simplificada do PGR, onde realizamos o levantamento preliminar de perigos a que dos trabalhadores estão expostos no ambiente de trabalho.\n\n"
       "Caso não identifiquemos exposições ocupacionais a agentes físicos, químicos e biológicos, a empresa fica dispensada da elaboração do PGR.\n\n"
-      "A P2P elabora seu Levantamento preliminar de Riscos Ocupacionais para a sua Declaração de ausência de riscos ou, se necessário, continua a análise para o PGR. ";
+      "A P2P elabora seu Levantamento preliminar de Riscos Ocupacionais para a sua Declaração de ausência de riscos ou, se necessário, continua a análise para o PGR.\n";
   final String textService4 =
       "A empresa deve realizar a AEP para identificar as situações de trabalho que,"
       " em decorrência da natureza e conteúdo das atividades requeridas,"
       " demandam adaptação às características psicofisiológicas dos trabalhadores,"
       " a fim de subsidiar a implementação das medidas de prevenção e adequações necessárias.\n\n"
-      "A P2P elabora sua AEP, entre em contato conosco.";
+      "A P2P elabora sua AEP, entre em contato conosco./n";
   final String textService5 =
       "Quando a AEP identifica riscos ergonômicos, se faz necessário aprofundar a análise com AET. deve abordar as condições de trabalho,"
       " conforme estabelecido nesta NR, incluindo as seguintes etapas:\n\n"
@@ -51,20 +51,20 @@ class ServicesPage extends StatefulWidget {
       "d) estabelecimento de diagnóstico;\n"
       "e) recomendações para as situações de trabalho analisadas;\n"
       "f) restituição dos resultados, validação e revisão das intervenções efetuadas, quando necessária, com a participação dos trabalhadores.\n\n"
-      "A P2P elabora sua AET contemplando todos os itens acima e te orienta em como executá-lo. ";
+      "A P2P elabora sua AET contemplando todos os itens acima e te orienta em como executá-lo.\n";
   final String textService6 =
       "O LTCAT é um documento estabelecido pelo INSS (Instituto Nacional do Seguro Social), "
       "com o objetivo de avaliar se o trabalhador tem direito a aposentadoria especial por ter exposição a agentes nocivos à saúde.\n\n"
       "Ele é obrigatório para todas as empresas que tem 1 ou mais funcionários,"
       "e é utilizado para o preenchimento do PPP (Perfil Profissiográfico Previdenciário)"
       " que a partir de janeiro/23 será eletrônico, enviado pelo eSocial.\n\n"
-      "Deve ser expedido por médico do trabalho ou engenheiro de segurança do trabalho nos termos da legislação trabalhista. ";
+      "Deve ser expedido por médico do trabalho ou engenheiro de segurança do trabalho nos termos da legislação trabalhista.\n";
   final String textService7 =
-      "Todas as empresas precisam informar para o governos os eventos de saúde e segurança dos seus trabalhadores: S-2210, S-2220 e S-2240."
-      "Nós preenchemos e enviamos para o eSocial todos esses eventos, seguindo as tabelas e lay-outs definidos pelo governo."
-      "No S-2210 enviaremos as informações das comunicações de acidente de trabalho.\n\n"
-      "No S-2220 enviaremos as informações dos atestados de saúde ocupacional, sejam eles admissional, demissional, periódico, mudança de função ou retorno ao trabalho."
-      "No S-2240 enviaremos as informações de agentes nocivos que o trabalhador estão expostos, com base na avaliação do LTCAT. ";
+      "Todas as empresas precisam informar para o governos os eventos de saúde e segurança dos seus trabalhadores: S-2210, S-2220 e S-2240.\n"
+      "Nós preenchemos e enviamos para o eSocial todos esses eventos, seguindo as tabelas e lay-outs definidos pelo governo.\n"
+      "No S-2210 enviaremos as informações das comunicações de acidente de trabalho.\n"
+      "No S-2220 enviaremos as informações dos atestados de saúde ocupacional, sejam eles admissional, demissional, periódico, mudança de função ou retorno ao trabalho.\n"
+      "No S-2240 enviaremos as informações de agentes nocivos que o trabalhador estão expostos, com base na avaliação do LTCAT.\n";
   final String textService8 =
       "Fazemos acompanhamento de validades dos programas da empresa e dos Atestados de saúde ocupacional dos trabalhadores, além de assessoria para cumprimento do plano de ações, Relatório analítico dos indicadores de saúde, apoio na escolha das clínicas de saúde ocupacional, entre outros…";
   final String textService9 =

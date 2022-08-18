@@ -183,6 +183,21 @@ class SiteConfig {
         ),
       ),
       Expanded(
+        flex: 1,
+        child: IconButton(
+          padding: EdgeInsets.zero,
+          onPressed: () {
+            Uri uri = Uri.parse("https://web.facebook.com/p2psaudeeseg");
+            tryLaunchUri(uri);
+          },
+          icon: FaIcon(
+            FontAwesomeIcons.facebook,
+            color: SiteConfig.lightColors.primary,
+            size: sizeI,
+          ),
+        ),
+      ),
+      Expanded(
         flex: smallScreen ? 1 : 4,
         child: const SizedBox(),
       ),

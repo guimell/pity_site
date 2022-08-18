@@ -11,10 +11,10 @@ class HomePage extends StatefulWidget {
 
   final String title = "Home";
   final String textService1 =
-      "A P2P é uma empresa de consultoria em gestão de saúde ocupacional e segurança do trabalho,"
-      "feita por pessoas para pessoas. Surgimos para trazer soluções de medicina, ergonomia e segurança do trabalho para micro e pequenas empresas,"
-      "auxiliando-as no cumprimento da legislação vigente e agregando valor ao cuidado com os colaboradores,"
-      "através de uma visão integral da saúde."
+      "A P2P é uma empresa de consultoria em gestão de saúde ocupacional e segurança do trabalho, "
+      "feita por pessoas para pessoas.\nSurgimos para trazer soluções de medicina, ergonomia e segurança do trabalho para micro e pequenas empresas, "
+      "auxiliando-as no cumprimento da legislação vigente e agregando valor ao cuidado com os colaboradores, "
+      "através de uma visão integral da saúde.\n"
       "Acreditamos que a saúde e segurança do trabalho, quando bem feitas, não são um custo para as empresas, mas sim um investimento, "
       "através da redução das tributações e das ausências do trabalhador por motivo de saúde, melhora da produtividade dos colaboradores.";
   final String textService3 =
@@ -69,6 +69,7 @@ class HomePageState extends State<HomePage> {
           ? Column(
               children: [
                 Container(
+                  width: SiteConfig.screenSize.width * 0.9,
                   margin: SiteConfig.smallScreen
                       ? const EdgeInsets.all(24)
                       : const EdgeInsets.all(48),
@@ -103,6 +104,7 @@ class HomePageState extends State<HomePage> {
                   ),
                 ),
                 Container(
+                  width: SiteConfig.screenSize.width * 0.9,
                   margin: SiteConfig.smallScreen
                       ? const EdgeInsets.all(24)
                       : const EdgeInsets.all(48),
@@ -137,6 +139,7 @@ class HomePageState extends State<HomePage> {
                   ),
                 ),
                 Container(
+                  width: SiteConfig.screenSize.width * 0.9,
                   margin: SiteConfig.smallScreen
                       ? const EdgeInsets.all(24)
                       : const EdgeInsets.all(48),
@@ -174,7 +177,7 @@ class HomePageState extends State<HomePage> {
             )
           : Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
+              children: [
                 InteractiveContent(
                     title: "Nossa missão",
                     icon: Icons.flag_circle,
@@ -218,59 +221,59 @@ class HomePageState extends State<HomePage> {
                 )
               ],
             ),
-            SiteConfig.smallScreen
-                ? Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Flexible(
-                        child: ServiceContainer(
-                            img: Image.asset("assets/images/paula/pity.jpg"),
-                            text:
-                                "Médica do trabalho, membro da Associação de medicina do trabalho, especialista em Perícias médicas pela Fundação Unimed e MBA em Gestão empresarial pela FGV."
-                                "Com mais de 12 anos de experiencia na área de saúde ocupacional, de empresas nas áreas de Indústria Química e Petroquímica, "
-                                "Construção civil, Bancário, Portuária, Mineração, Varejo e atacado. Atuou em grandes empresas, como: Braskem, Banco do Brasil, Grupo Unigel, Walmart, Grupo Big, Grupo Carrefour, entre outras. Além de atuação como perita judicial."
-                                "",
-                            title: "Dra. Priscila Merces"),
-                      ),
-                      Flexible(
-                        child: ServiceContainer(
-                            img: Image.asset(
-                                "assets/images/paula/engenheiraSeg.jpeg"),
-                            text:
-                                "Engenheira de Produção, especialista em segurança do trabalho e formação em higiene ocupacional."
-                                "Com mais de 12 anos de experiencia nas áreas de Indústria Química e Petroquímica, Construção civil, Indústria de alimentos., Hospitalar, saúde ocupacional, entre outras. Além de atuação como Professor docente no Senai.",
-                            title: "Eng. Rosana Luz"),
-                      ),
-                    ],
-                  )
-                : Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: SiteConfig.screenSize.height * 0.55,
-                        width: SiteConfig.screenSize.width * 0.45,
-                        child: ServiceContainer(
-                            img: Image.asset("assets/images/paula/pity.jpg"),
-                            text:
-                                "Médica do trabalho, membro da Associação de medicina do trabalho, especialista em Perícias médicas pela Fundação Unimed e MBA em Gestão empresarial pela FGV."
-                                "Com mais de 12 anos de experiencia na área de saúde ocupacional, de empresas nas áreas de Indústria Química e Petroquímica, "
-                                "Construção civil, Bancário, Portuária, Mineração, Varejo e atacado. Atuou em grandes empresas, como: Braskem, Banco do Brasil, Grupo Unigel, Walmart, Grupo Big, Grupo Carrefour, entre outras. Além de atuação como perita judicial."
-                                "",
-                            title: "Dra. Priscila Merces"),
-                      ),
-                      SizedBox(
-                        height: SiteConfig.screenSize.height * 0.55,
-                        width: SiteConfig.screenSize.width * 0.45,
-                        child: ServiceContainer(
-                            img: Image.asset(
-                                "assets/images/paula/engenheiraSeg.jpeg"),
-                            text:
-                                "Engenheira de Produção, especialista em segurança do trabalho e formação em higiene ocupacional."
-                                "Com mais de 12 anos de experiencia nas áreas de Indústria Química e Petroquímica, Construção civil, Indústria de alimentos., Hospitalar, saúde ocupacional, entre outras. Além de atuação como Professor docente no Senai.",
-                            title: "Eng. Rosana Luz"),
-                      ),
-                    ],
-                  ),
+
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Flexible(
+                  child: ServiceContainer(
+                      img: Image.asset("assets/images/paula/pity.jpg"),
+                      text:
+                          "Médica do trabalho, membro da Associação de medicina do trabalho, especialista em Perícias médicas pela Fundação Unimed e MBA em Gestão empresarial pela FGV."
+                          "Com mais de 12 anos de experiencia na área de saúde ocupacional, de empresas nas áreas de Indústria Química e Petroquímica, "
+                          "Construção civil, Bancário, Portuária, Mineração, Varejo e atacado. Atuou em grandes empresas, como: Braskem, Banco do Brasil, Grupo Unigel, Walmart, Grupo Big, Grupo Carrefour, entre outras. Além de atuação como perita judicial."
+                          "",
+                      title: "Dra. Priscila Merces"),
+                ),
+                Flexible(
+                  child: ServiceContainer(
+                      img:
+                          Image.asset("assets/images/paula/engenheiraSeg.jpeg"),
+                      text:
+                          "Engenheira de Produção, especialista em segurança do trabalho e formação em higiene ocupacional."
+                          "Com mais de 12 anos de experiencia nas áreas de Indústria Química e Petroquímica, Construção civil, Indústria de alimentos., Hospitalar, saúde ocupacional, entre outras. Além de atuação como Professor docente no Senai.",
+                      title: "Eng. Rosana Luz"),
+                ),
+              ],
+            )
+            // : Row(
+            //     mainAxisAlignment: MainAxisAlignment.center,
+            //     children: [
+            //       SizedBox(
+            //         height: SiteConfig.screenSize.height * 0.55,
+            //         width: SiteConfig.screenSize.width * 0.45,
+            //         child: ServiceContainer(
+            //             img: Image.asset("assets/images/paula/pity.jpg"),
+            //             text:
+            //                 "Médica do trabalho, membro da Associação de medicina do trabalho, especialista em Perícias médicas pela Fundação Unimed e MBA em Gestão empresarial pela FGV."
+            //                 "Com mais de 12 anos de experiencia na área de saúde ocupacional, de empresas nas áreas de Indústria Química e Petroquímica, "
+            //                 "Construção civil, Bancário, Portuária, Mineração, Varejo e atacado. Atuou em grandes empresas, como: Braskem, Banco do Brasil, Grupo Unigel, Walmart, Grupo Big, Grupo Carrefour, entre outras. Além de atuação como perita judicial."
+            //                 "",
+            //             title: "Dra. Priscila Merces"),
+            //       ),
+            //       SizedBox(
+            //         height: SiteConfig.screenSize.height * 0.55,
+            //         width: SiteConfig.screenSize.width * 0.45,
+            //         child: ServiceContainer(
+            //             img: Image.asset(
+            //                 "assets/images/paula/engenheiraSeg.jpeg"),
+            //             text:
+            //                 "Engenheira de Produção, especialista em segurança do trabalho e formação em higiene ocupacional."
+            //                 "Com mais de 12 anos de experiencia nas áreas de Indústria Química e Petroquímica, Construção civil, Indústria de alimentos., Hospitalar, saúde ocupacional, entre outras. Além de atuação como Professor docente no Senai.",
+            //             title: "Eng. Rosana Luz"),
+            //       ),
+            //     ],
+            //   ),
           ],
         ),
       ),
